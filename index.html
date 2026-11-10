@@ -1,0 +1,63 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Una pregunta ❤️</title>
+
+    <style>
+        body {
+            background: #ffe4ec;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 50px 15px;
+        }
+
+        .caja {
+            background: white;
+            padding: 30px;
+            border-radius: 20px;
+            max-width: 350px;
+            margin: auto;
+        }
+
+        button {
+            padding: 14px;
+            margin: 8px;
+            border: none;
+            border-radius: 12px;
+            font-size: 17px;
+            cursor: pointer;
+        }
+
+        .si { background: #ff6b91; color: white; }
+        .no { background: #ddd; }
+    </style>
+</head>
+
+<body>
+    <div class="caja">
+        <h1>Hola, Alessandra ❤️</h1>
+        <h2>¿Me amas?</h2>
+
+        <button class="si" onclick="responder(true)">
+            Sí, te amo ❤️
+        </button>
+
+        <button class="no" onclick="responder(false)">
+            No 😭
+        </button>
+
+        <h2 id="respuesta"></h2>
+    </div>
+
+    <script>
+        function responder(si) {
+            document.getElementById("respuesta").textContent =
+                si ? "¡YO TAMBIÉN TE AMO! ❤️" : "Auch... me rompiste el corazón 😭";
+        }
+    </script>
+</body>
+</html>
+
